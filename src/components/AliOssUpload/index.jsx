@@ -10,28 +10,30 @@ import { Upload, message } from 'antd'
 import moment from 'moment'
 import OSS from 'ali-oss'
 import { PlusOutlined, LoadingOutlined, InboxOutlined } from '@ant-design/icons'
-import { accessKeySecret, accessKeyId, bucket } from '@/config/secret'
+// import { accessKeySecret, accessKeyId, bucket } from '@/config/secret'
 
 const { Dragger } = Upload
-
+/*
 const client = new OSS({
   region: 'oss-cn-hangzhou',
   accessKeyId,
   accessKeySecret,
   bucket,
   secure: true,
-})
+}) */
 
 const UploadToOss = (path, file) => {
   return new Promise((resolve, reject) => {
-    client
+    resolve({})
+
+    /* client
       .put(path, file)
       .then(data => {
         resolve(data)
       })
       .catch(error => {
         reject(error)
-      })
+      }) */
   })
 }
 
